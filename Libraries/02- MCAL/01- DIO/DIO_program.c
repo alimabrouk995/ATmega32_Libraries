@@ -15,10 +15,10 @@ static void DIO_voidSetPinxPullType (u8 copy_u8Port,u8 copy_u8Pin,u8 copy_u8Pull
 void MDIO_voidSetPinxConfiguration (u8 copy_u8Port,u8 copy_u8Pin,Pinx_Config *config_ptr)
 {
 	/* Pin Mode */
-	DIO_voidSetPinxMode (u8 copy_u8Port,u8 copy_u8Pin,config_ptr->mode);
+	DIO_voidSetPinxMode (copy_u8Port,copy_u8Pin,config_ptr->mode);
 	
 	/* Pull-up/down direction */
-	DIO_voidSetPinxPullType (u8 copy_u8Port,u8 copy_u8Pin,config_ptr->pull_type);
+	DIO_voidSetPinxPullType (copy_u8Port,copy_u8Pin,config_ptr->pull_type);
 	
 	
 	
